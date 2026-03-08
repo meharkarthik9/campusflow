@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+<div class="col-12 col-md-10 col-lg-8">
+
+<div class="card shadow-sm">
+
+<div class="card-body">
+
+<h4 class="mb-4 text-center">Add Student</h4>
+
+<form method="post">
+
+{% csrf_token %}
+
+<div class="row g-3">
+
+<div class="col-12 col-md-6">
+
+<label class="form-label">Name</label>
+<input type="text" name="name" class="form-control" required>
+
+</div>
+
+<div class="col-12 col-md-6">
+
+<label class="form-label">Email</label>
+<input type="email" name="email" class="form-control" required>
+
+</div>
+
+<div class="col-12 col-md-6">
+
+<label class="form-label">Age</label>
+<input type="number" name="age" class="form-control" required>
+
+</div>
+
+<div class="col-12 col-md-6">
+
+<label class="form-label">Course</label>
+<input type="text" name="course" class="form-control" required>
+
+</div>
+
+</div>
+
+<div class="mt-4 d-flex flex-column flex-md-row gap-2">
+
+<button class="btn btn-success w-100 w-md-auto">
+Save Student
+</button>
+
+<a href="/students/" class="btn btn-secondary w-100 w-md-auto">
+Cancel
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}
