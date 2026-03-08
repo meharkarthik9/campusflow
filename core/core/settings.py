@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY SETTINGS
 SECRET_KEY = 'django-insecure-u1t^&v_6_c(&ad2+*dgraym0uldp!07ssla&t+-e)&_@8vo37n'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -36,20 +36,17 @@ INSTALLED_APPS = [
 # MIDDLEWARE
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-
-    # Static files middleware (required for Railway / production)
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 
-ROOT_URLCONF = 'core.urls'
 
 
 # TEMPLATES
@@ -70,7 +67,7 @@ TEMPLATES = [
 
 
 WSGI_APPLICATION = 'core.wsgi.application'
-
+ROOT_URLCONF = 'core.urls'
 
 # DATABASE
 DATABASES = {
@@ -110,7 +107,6 @@ USE_TZ = True
 
 # STATIC FILES
 STATIC_URL = 'static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
