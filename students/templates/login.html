@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>CampusFlow Login</title>
@@ -16,6 +17,7 @@ min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
+font-family:'Segoe UI', sans-serif;
 }
 
 .login-card{
@@ -23,17 +25,20 @@ width:100%;
 max-width:400px;
 border-radius:15px;
 }
+
 .note{
-    font-size:12px;
-    text-align:center;
-    color:red;
-    padding-top:10px;
+font-size:12px;
+text-align:center;
+color:red;
+padding-top:10px;
 }
+
 .note1{
-    font-size:11px;
-    text-align:center;
-    color:red;
+font-size:11px;
+text-align:center;
+color:red;
 }
+
 </style>
 
 </head>
@@ -47,6 +52,7 @@ border-radius:15px;
 <form method="post">
 
 {% csrf_token %}
+
 {% if form.errors %}
 <div class="alert alert-danger text-center">
 Invalid username or password
@@ -56,26 +62,40 @@ Invalid username or password
 <div class="mb-3">
 
 <label class="form-label">Username</label>
-<input type="text" name="username" class="form-control">
+
+<input type="text" name="username" class="form-control" required>
 
 </div>
 
 <div class="mb-3">
 
 <label class="form-label">Password</label>
-<input type="password" name="password" class="form-control">
+
+<input type="password" name="password" class="form-control" required>
 
 </div>
 
 <button class="btn btn-primary w-100">
 Login
 </button>
-<p class="note">NOTE: New Faculties should register in Department for Access</p>
-<p class="note1">Testing- id: admin, pass: admin123</p>
+
+<div class="text-center mt-3">
+Don't have an account?
+<a href="/register/">Register here</a>
+</div>
+
+<p class="note">
+NOTE: New Faculties should register in Department for Access
+</p>
+
+<p class="note1">
+Testing — id: admin | pass: admin123
+</p>
 
 </form>
 
 </div>
 
 </body>
+
 </html>
