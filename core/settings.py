@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY SETTINGS
 SECRET_KEY = 'django-insecure-u1t^&v_6_c(&ad2+*dgraym0uldp!07ssla&t+-e)&_@8vo37n'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "campusflow-production-34aa.up.railway.app",
